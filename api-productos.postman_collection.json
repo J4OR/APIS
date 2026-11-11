@@ -1,0 +1,123 @@
+{
+  "info": {
+    "name": "API de productos",
+    "description": "Colección para probar la API de productos con Express.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Listar productos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/productos",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["productos"]
+        }
+      }
+    },
+    {
+      "name": "Obtener producto por id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/productos/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["productos", "1"]
+        }
+      }
+    },
+    {
+      "name": "Crear producto",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Monitor\",\n  \"precio\": 300,\n  \"stock\": 12\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/productos",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["productos"]
+        }
+      }
+    },
+    {
+      "name": "Actualizar producto completo",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Laptop Pro\",\n  \"precio\": 1500,\n  \"stock\": 8\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/productos/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["productos", "1"]
+        }
+      }
+    },
+    {
+      "name": "Actualizar producto parcial",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"stock\": 20\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/productos/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["productos", "1"]
+        }
+      }
+    },
+    {
+      "name": "Eliminar producto",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/productos/3",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["productos", "3"]
+        }
+      }
+    }
+  ]
+}
